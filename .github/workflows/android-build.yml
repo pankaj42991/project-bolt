@@ -26,14 +26,14 @@ jobs:
       run: ./gradlew assembleRelease
 
     - name: Upload APK
-      uses: actions/upload-artifact@v43
+      uses: actions/upload-artifact@v4
       with:
         name: utilityapp-release
         path: app/build/outputs/apk/release/app-release.apk
 
     - name: Upload mapping file
       if: ${{ github.event_name == 'push' }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: mapping-file
         path: app/build/outputs/mapping/release/mapping.txt
